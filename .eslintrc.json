@@ -21,5 +21,8 @@
     "sourceType": "module"
   },
   "plugins": ["react", "@typescript-eslint", "jest"],
-  "rules": {}
+  "rules": {
+    "space-before-function-paren": 0,
+    "comma-dangle": ["error", "always-multiline"]
+  }
 }
