@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react'
 
-interface Props {}
+import { StyledSection } from './Sections.styled'
 
-export default function Section({}: Props): ReactElement {
-  return <div></div>
+export default function Section(props: any) {
+  return <StyledSection>{props.children}</StyledSection>
 }

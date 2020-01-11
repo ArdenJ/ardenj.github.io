@@ -10,8 +10,9 @@ import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import Links from './components/Links/Links'
 import Section from './components/Section/Section'
+import Example from './components/Example/Example'
 
-const links = ['twitter', 'email']
+const links = ['twitter', 'github', 'email']
 
 const App: React.FC = () => {
   return (
@@ -27,7 +28,9 @@ const App: React.FC = () => {
             <p></p>
             <Links links={links} />
           </Header>
-          <Section></Section>
+          <Section>
+            <Example />
+          </Section>
         </Main>
         <div className="footer" style={{ height: '26vh' }}>
           <Footer>This is the footer</Footer>
