@@ -7,8 +7,8 @@ export const StyledLink = styled.button`
   font-size: 1.2rem;
   margin: 0.5rem;
   padding: 0.8rem 1.2rem;
-  border: 4px solid ${({ theme }) => theme.textLight};
-  color: ${({ theme }) => theme.textLight};
+  border: 4px solid ${({ theme }) => theme.textDark};
+  color: ${({ theme }) => theme.textDark};
 
   &:first-child {
     margin: 0.5rem 0.5rem 0.5rem 0;

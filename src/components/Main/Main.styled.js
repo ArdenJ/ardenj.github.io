@@ -5,8 +5,7 @@ export const StyledMain = styled.main`
   grid-template-areas: 'header section';
   overflow-x: hidden;
   align-items: center;
-  background: ${({ theme }) => theme.bodyDark};
-  color: ${({ theme }) => theme.textLight};
+  color: ${({ theme }) => theme.textLink};
   display: flex;
   height: 100vh;
   justify-content: center;

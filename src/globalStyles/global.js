@@ -18,8 +18,8 @@ export const GlobalStyles = createGlobalStyle`
     body {
         overflow-x: hidden;
         align-items: center;
-        background: ${({ theme }) => theme.primaryLight};
-        color: ${({ theme }) => theme.primaryDark};
+        background: ${({ theme }) => theme.bodyLight};
+        color: ${({ theme }) => theme.textDark};
         display: flex;
         height: 100vh;
         justify-content: center;

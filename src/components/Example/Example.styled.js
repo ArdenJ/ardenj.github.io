@@ -3,13 +3,13 @@ import styled from 'styled-components'
 export const StyledExample = styled.article`
   height: 100%;
   width: 100%;
-  background: repeating-linear-gradient(
+  /* background: repeating-linear-gradient(
     -45deg,
     #121212 0%,
     #121212 3.5%,
     #222222 3.5%,
     #222222 7%
-  );
+  ); */
   display: grid;
   grid-template-areas:
     'title'
@@ -39,7 +39,7 @@ export const StyledExample = styled.article`
 
     display: grid;
     grid-template-areas: 'imageContainer textContainer';
-    grid-template-columns: 40% 60%;
+    grid-template-columns: auto 60%;
 
     > .imageContainer {
       grid-area: imageContainer;

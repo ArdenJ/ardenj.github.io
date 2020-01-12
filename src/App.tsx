@@ -21,9 +21,11 @@ const App: React.FC = () => {
       <Container>
         <Main>
           <Header>
-            <h1>helloo, I&apos;m Arden*</h1>
+            <h1>
+              helloo, I&apos;m Arden<span style={{ color: '#ff0500' }}>*</span>
+            </h1>
             <h2>
-              I use Js/Ts (Node; React) and GraphQL (Apollo) to make things
+              I use Js/Ts (Node; React) and GraphQL (Apollo) to make things 🚀
             </h2>
             <p></p>
             <Links links={links} />
