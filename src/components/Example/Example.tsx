@@ -2,35 +2,43 @@ import React from 'react'
 
 import { StyledExample } from './Example.styled'
 
+import { DevSite, WebPlayer } from './examples'
+
 interface Props {}
 
 const Example: React.FC<Props> = () => {
-  return (
-    <StyledExample>
-      <div className="title">
-        <h2>This is the first example</h2>
-        <h3>
-          <a>this is a github link</a>
-        </h3>
-      </div>
-      <div className="details">
-        <div className="imageContainer">an image goes here</div>
-        <div className="textContainer">
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt,
-            atque voluptatibus sit qui expedita corrupti placeat tenetur ratione
-            nobis sunt, perferendis quos perspiciatis quasi maiores amet
-            obcaecati. Harum, inventore tempora?
-          </p>
-          <h4>Challenges</h4>
-          <ul>
-            <li>Bunch of list items</li>
-          </ul>
-        </div>
-      </div>
-      <div className="techContainer">Tech logooooos</div>
-    </StyledExample>
-  )
+  const ExampleArr = [DevSite, WebPlayer]
+
+  const childArr = ExampleArr.map(example => {
+    const {
+      _exampleData: { title, repoLink, demoLink, description, challenges },
+    } = example
+    return (
+      <>
+        <StyledExample>
+          <div className="title">
+            <h2>{title}</h2>
+            <h3>
+              <a>{demoLink}</a>
+            </h3>
+          </div>
+          <div className="details">
+            <div className="imageContainer">an image goes here</div>
+            <div className="textContainer">
+              <p>{description}</p>
+              <h4>Challenges</h4>
+              <ul>
+                <li>Bunch of list items</li>
+              </ul>
+            </div>
+          </div>
+          <div className="techContainer">Tech logooooos</div>
+        </StyledExample>
+      </>
+    )
+  })
+
+  return <>{childArr}</>
 }
 
 export default Example

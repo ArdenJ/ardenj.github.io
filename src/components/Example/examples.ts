@@ -35,3 +35,12 @@ export const DevSite = new WorkExample(
   ['these', 'were', 'the', 'challenges'],
   ['Js', 'Ts', 'React'],
 )
+
+export const WebPlayer = new WorkExample(
+  'React Web Player',
+  'https:github.io/ArdenJ/site',
+  '',
+  'This is the web player description in less than 200 words',
+  ['There were a few challenges'],
+  ['Js', 'React'],
+)
