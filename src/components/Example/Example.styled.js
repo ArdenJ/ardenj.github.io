@@ -1,26 +1,35 @@
 import styled from 'styled-components'
 
 export const StyledExample = styled.article`
+  position: relative;
   height: 100%;
   width: 100%;
-  /* background: repeating-linear-gradient(
-    -45deg,
-    #121212 0%,
-    #121212 3.5%,
-    #222222 3.5%,
-    #222222 7%
-  ); */
-  display: grid;
-  grid-template-areas:
-    'title'
-    'details'
-    'technologies';
-  grid-template-rows: auto 2fr 1fr;
-  padding: 1rem;
+  display: inline-block;
+  flex-shrink: 0;
+  .container {
+    display: grid;
+    height: 100%;
+    grid-template-areas:
+      'title whitespace'
+      'details whitespace'
+      'technologies whitespace';
+    grid-template-columns: 100% auto;
+    grid-template-rows: 5rem auto 3rem;
+    padding: 1rem;
+
+    h2,
+    h3,
+    h4,
+    li,
+    p {
+      background-color: white;
+    }
+  }
 
   .title {
     grid-area: title;
     padding: 2rem 0 1rem 0;
+    width: 50%;
 
     > h2 {
       font-size: 1.6rem;
@@ -34,21 +43,21 @@ export const StyledExample = styled.article`
     }
   }
 
+  /* This will require two different styles for rendering - the flex for when there is no image present and relative/abs positioned parent and child for when aan image is available. */
   .details {
     grid-area: details;
 
-    display: grid;
-    grid-template-areas: 'imageContainer textContainer';
-    grid-template-columns: auto 60%;
+    display: flex;
+    /* grid-template-areas: 'imageContainer textContainer'; */
 
     > .imageContainer {
       grid-area: imageContainer;
-      background-color: yellow;
     }
 
     > .textContainer {
       grid-area: textContainer;
-      padding: 0 1rem;
+      max-width: 100%;
+
       p,
       h4,
       li {
@@ -60,10 +69,11 @@ export const StyledExample = styled.article`
       }
     }
   }
+
   .techContainer {
     grid-area: technologies;
-    height: 3rem;
-    margin: 1.2rem 0 0;
+    height: 100%;
+    padding: 1.2rem 0 0;
     vertical-align: middle;
     background-color: blue;
   }

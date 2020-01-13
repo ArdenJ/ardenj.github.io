@@ -2,28 +2,47 @@ import React from 'react'
 
 import { StyledExample } from './Example.styled'
 
-import { DevSite, WebPlayer } from './examples'
+import { DevSite, WebPlayer, WebPlayurrr } from './examples'
 
 interface Props {}
 
 const Example: React.FC<Props> = () => {
-  const ExampleArr = [DevSite, WebPlayer]
+  const ExampleArr = [DevSite, WebPlayer, WebPlayurrr]
 
   const childArr = ExampleArr.map(example => {
     const {
-      _exampleData: { title, repoLink, demoLink, description, challenges },
+      _exampleData: {
+        title,
+        repoLink,
+        demoLink,
+        image,
+        description,
+        challenges,
+      },
     } = example
-    return (
-      <>
-        <StyledExample>
-          <div className="title">
-            <h2>{title}</h2>
-            <h3>
-              <a>{demoLink}</a>
-            </h3>
-          </div>
+
+    const challengeList: JSX.Element[] = challenges.map(
+      (i: string, index: number) => <li key={`challenge_${index}`}>{i}</li>,
+    )
+
+    // This isn't very DRY - TODO: return compoonent that styles  itself automatically
+    const Details = () => {
+      if (image === '') {
+        return (
           <div className="details">
-            <div className="imageContainer">an image goes here</div>
+            <div className="textContainer">
+              <p>{description}</p>
+              <h4>Challenges</h4>
+              <ul>{challengeList}</ul>
+            </div>
+          </div>
+        )
+      } else {
+        return (
+          <div className="details">
+            <div className="imageContainer">
+              <img src={`${image}`} alt="alt text" />
+            </div>
             <div className="textContainer">
               <p>{description}</p>
               <h4>Challenges</h4>
@@ -32,7 +51,23 @@ const Example: React.FC<Props> = () => {
               </ul>
             </div>
           </div>
-          <div className="techContainer">Tech logooooos</div>
+        )
+      }
+    }
+
+    return (
+      <>
+        <StyledExample>
+          <div className="container">
+            <div className="title">
+              <h2>{title}</h2>
+              <h3>
+                <a>{demoLink === '' ? repoLink : demoLink}</a>
+              </h3>
+            </div>
+            <Details />
+            <div className="techContainer">Tech logooooos</div>
+          </div>
         </StyledExample>
       </>
     )

@@ -18,15 +18,17 @@ export const GlobalStyles = createGlobalStyle`
     body {
         overflow-x: hidden;
         align-items: center;
-        background: ${({ theme }) => theme.bodyLight};
         color: ${({ theme }) => theme.textDark};
         display: flex;
         height: 100vh;
         justify-content: center;
         text-rendering: optimizeLegibility;
+        line-height: 1.5;
     }
+    
     h1, h2, h3, h4, h5, h6 {
         font-family: 'Montserrat', sans-serif;
         font-weight: 700;
+        line-height: 1;
     }
 `
