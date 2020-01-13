@@ -22,11 +22,9 @@ const App: React.FC = () => {
         <Main>
           <Header>
             <h1>
-              helloo, I&apos;m Arden<span style={{ color: '#ff0500' }}>*</span>
+              hello, I&apos;m Arden<span style={{ color: '#ff0500' }}>*</span>
             </h1>
-            <h2>
-              I use Js/Ts (Node; React) and GraphQL (Apollo) to make things 🚀
-            </h2>
+            <h2>I use Js/Ts and GraphQL to make things</h2>
             <p></p>
             <Links links={links} />
           </Header>
@@ -35,7 +33,15 @@ const App: React.FC = () => {
           </Section>
         </Main>
         <div className="footer" style={{ height: '26vh' }}>
-          <Footer>This is the footer</Footer>
+          <Footer>
+            <>
+              * I originally trained as a classical composer (think Beethoven,
+              only with better hearing and fewer good ideas) but fell in love
+              with writing code during the second year of my master’s degree.
+              Since then I have spent some time learning different technologies
+              and feel confident to begin a new career as a software developer.
+            </>
+          </Footer>
         </div>
       </Container>
     </ThemeProvider>

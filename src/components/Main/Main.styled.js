@@ -8,6 +8,7 @@ export const StyledMain = styled.main`
   color: ${({ theme }) => theme.textLink};
   display: flex;
   height: 100vh;
+  width: 100vw;
   justify-content: center;
   text-rendering: optimizeLegibility;
 `

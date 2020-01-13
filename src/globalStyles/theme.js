@@ -1,5 +1,5 @@
 export const theme = {
-  textLight: '#cccccc',
+  textLight: '#fefefe',
   textDark: '#222222',
   textDarkLink: '#101010',
   textAccent: '#ff0500',
