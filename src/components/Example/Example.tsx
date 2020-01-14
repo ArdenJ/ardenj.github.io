@@ -24,7 +24,6 @@ const Example: React.FC<Props> = () => {
     const challengeList: JSX.Element[] = challenges.map(
       (i: string, index: number) => <li key={`challenge_${index}`}>{i}</li>,
     )
-
     // This isn't very DRY - TODO: return compoonent that styles  itself automatically
     const Details = () => {
       if (image === '') {
