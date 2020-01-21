@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
-export const StyledFooter = styled.footer`
+export const StyledFooter = styled.section`
   height: 100%;
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 1.6rem 2rem 1.6rem 0;
   background-color: ${({ theme }) => theme.bodyAccent1};
   color: ${({ theme }) => theme.textLight};
 
@@ -17,5 +17,9 @@ export const StyledFooter = styled.footer`
     & :first-child {
       margin-bottom: 1rem;
     }
+  }
+
+  .copyright {
+    font-weight: bold;
   }
 `

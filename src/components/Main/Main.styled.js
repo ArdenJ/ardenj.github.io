@@ -6,7 +6,6 @@ export const StyledMain = styled.main`
   overflow-x: hidden;
   align-items: center;
   color: ${({ theme }) => theme.textLink};
-  display: flex;
   height: 100vh;
   width: 100vw;
   justify-content: center;
