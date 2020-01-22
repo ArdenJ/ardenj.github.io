@@ -2,6 +2,8 @@ import React from 'react'
 
 import { devSite, audioPlayer } from './demoExamples'
 
+import { StyledDemo } from './Drawer.styled'
+
 const Demos: React.FC = () => {
   const arr = [devSite, audioPlayer]
 
@@ -14,7 +16,7 @@ const Demos: React.FC = () => {
     const DemoItem = () => {
       if (demoLink !== undefined || demoLink !== '') {
         return (
-          <div>
+          <StyledDemo>
             <h1 className="demoTitle">{title}</h1>
             <li key={`${title}_1`}>
               <a href={`${demoLink}`} rel="noopener noreferrer" target="_blank">
@@ -26,19 +28,19 @@ const Demos: React.FC = () => {
                 repo
               </a>
             </li>
-          </div>
+          </StyledDemo>
         )
       } else {
         //   TODO: this not dry.
         return (
-          <div>
+          <StyledDemo>
             <h1 className="demoTitle">{title}</h1>
             <li key={`${title}_1`}>
               <a href={`${demoLink}`} rel="noopener noreferrer" target="_blank">
                 demo
               </a>
             </li>
-          </div>
+          </StyledDemo>
         )
       }
     }

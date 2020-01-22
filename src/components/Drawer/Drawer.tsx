@@ -15,7 +15,7 @@ export default function Drawer(props: {
         className="drawerButton"
         onClick={() => props.setOpen(!props.open)}
       >
-        »
+        <span>&times;</span>
       </button>
       <div className="demos">
         <Demos />

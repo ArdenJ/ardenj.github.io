@@ -1,5 +1,3 @@
-// examples as named exports
-
 interface IData {
   title: string
   repoLink: string
@@ -24,12 +22,12 @@ class WorkExample {
 
 export const devSite = new WorkExample(
   'this site',
-  'https://github.io/ArdenJ/site',
+  'https://github.com/ArdenJ/site',
   'https://ardenj.co',
 )
 
 export const audioPlayer = new WorkExample(
   'ID3 audio player',
-  'https://github.io/ArdenJ/audioplayer',
+  'https://github.com/ArdenJ/audioplayer',
   'https://w9c0x.csb.app/',
 )

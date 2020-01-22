@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyles = createGlobalStyle`
 
-@import url('href="https://fonts.googleapis.com/css?family=Lato:300,300i,700|Montserrat:500,700&display=swap"');
+@import url('href="https://fonts.googleapis.com/css?family=Lato:400,400i,700|Montserrat:500,700&display=swap"');
     
     * {
         padding: 0;

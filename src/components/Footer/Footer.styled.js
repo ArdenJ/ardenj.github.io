@@ -3,16 +3,17 @@ import styled from 'styled-components'
 export const StyledFooter = styled.section`
   height: 100%;
   width: 100%;
-  padding: 1.6rem 2rem 1.6rem 0;
-  background-color: ${({ theme }) => theme.bodyAccent1};
-  color: ${({ theme }) => theme.textLight};
+  background-color: ${({ theme }) => theme.bodyLight};
+  color: ${({ theme }) => theme.textDark};
+  font-size: 1.2rem;
 
   .wrapper {
     display: grid;
+    padding: 1.6rem 2rem;
     grid-template-areas:
       'about'
       'copyright';
-    max-width: 80%;
+    max-width: 100%;
 
     & :first-child {
       margin-bottom: 1rem;
@@ -21,5 +22,11 @@ export const StyledFooter = styled.section`
 
   .copyright {
     font-weight: bold;
+  }
+
+  @media ${({ theme }) => theme.screenWidth.medium} {
+    .wrapper {
+      width: 80%;
+    }
   }
 `

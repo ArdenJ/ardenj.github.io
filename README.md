@@ -1,6 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Personal Page
 
-## Available Scripts
+The intention of this simple landing page is to direct people who may be interested in what I can do to projects that demonstrate my skills. The page itself is written mainly using TypeScript and styled components using [Create React App](https://github.com/facebook/create-react-app)'s TypeScript starter.
+
+## Getting Started
 
 In the project directory, you can run:
 
@@ -12,33 +14,17 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `yarn test`
+## To Dos
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Make it a little more visually interesting (I'd like to do something with React Spring...)
+- Create some simple tests
 
-### `yarn build`
+## Built With
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+N.B. Apart from Styled-Components, the below all came nicely packaged in Create React App.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [React](https://reactjs.org/) - The web framework used
+- [TypeScript](https://www.typescriptlang.org/docs/home.html) - for strong typing
+- [Styled-Components](https://styled-components.com/) - CSS in Js
+- [Jest](https://jestjs.io/) - Test framework
+- [Testing-Library](https://testing-library.com/docs/react-testing-library/intro) - for testing React components

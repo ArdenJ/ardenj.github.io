@@ -5,16 +5,18 @@ import { ThemeProvider } from 'styled-components'
 import { theme } from './styling/theme'
 import { GlobalStyles } from './styling/global'
 
-import Container from './components/Container/Container'
-import Main from './components/Main/Main'
-import Header from './components/Header/Header'
-import Footer from './components/Footer/Footer'
-import Links from './components/Links/Links'
-import Drawer from './components/Drawer/Drawer'
+import {
+  Container,
+  Main,
+  Header,
+  Footer,
+  Links,
+  Drawer,
+} from './components/index'
 
 import { useClickOut } from './useClickOut'
 
-const links = ['twitter', 'github', 'email']
+import { userLinks } from './data/siteconfig'
 
 const App: React.FC = () => {
   const [open, setOpen] = useState<boolean>(false)
@@ -25,7 +27,15 @@ const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <div style={{ width: '100vw', height: '100vh', display: 'grid' }}>
+      <div
+        style={{
+          width: '100vw',
+          height: '100vh',
+          display: 'grid',
+          padding: 0,
+          margin: 0,
+        }}
+      >
         <FocusLock disabled={!open}>
           <Drawer open={open} setOpen={setOpen} id={menuId} />
         </FocusLock>
@@ -33,10 +43,10 @@ const App: React.FC = () => {
           <Main>
             <Header>
               <h1>
-                I&apos;m Arden<span style={{ color: '#ff0500' }}>*</span>
+                I&apos;m Arden<span style={{ color: '#101010' }}>*</span>
               </h1>
-              <p>I like to use javascript and graphql to make things</p>
-              <Links links={links} />
+              <p>I like using javascript and graphql to make things</p>
+              <Links links={userLinks} />
               <div style={{ width: '100%' }}>
                 <button className="demoButton" onClick={() => setOpen(!open)}>
                   demos

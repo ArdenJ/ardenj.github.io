@@ -5,7 +5,9 @@ export const StyledMain = styled.main`
   grid-template-areas: 'header section';
   overflow-x: hidden;
   align-items: center;
-  color: ${({ theme }) => theme.textLink};
+  background-color: ${({ theme }) => theme.bodyAccent};
+  background-image: linear-gradient(40deg, #ff0500, #b00b1e);
+  color: ${({ theme }) => theme.textLight};
   height: 100vh;
   width: 100vw;
   justify-content: center;

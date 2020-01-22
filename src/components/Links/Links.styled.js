@@ -5,6 +5,7 @@ export const StyledLinkContainer = styled.div`
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
+  background: transparent;
   width: 60%;
 
   @media ${({ theme }) => theme.screenWidth.medium} {
@@ -13,6 +14,12 @@ export const StyledLinkContainer = styled.div`
 
   @media ${({ theme }) => theme.screenWidth.large} {
     width: 100%;
+  }
+
+  a {
+    text-decoration: none;
+    color: ${({ theme }) => theme.textLight};
+    cursor: pointer;
   }
 `
 
@@ -23,6 +30,6 @@ export const StyledLink = styled.button`
   font-size: 1.2rem;
   padding: 0.8rem 1.2rem;
   margin: 0 0.6rem 0.4rem 0;
-  border: 4px solid ${({ theme }) => theme.textDark};
-  color: ${({ theme }) => theme.textDark};
+  border: 4px solid ${({ theme }) => theme.textLight};
+  color: ${({ theme }) => theme.textLight};
 `

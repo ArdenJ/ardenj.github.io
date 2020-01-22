@@ -12,19 +12,21 @@ export const StyledHeader = styled.header`
   }
 
   p {
+    line-height: 2rem;
     font-size: 1.8rem;
     width: 80%;
     margin: 0.4rem 0 0.8rem 0;
   }
 
   .demoButton {
-    background: ${({ theme }) => theme.bodyDark};
+    background: ${({ theme }) => theme.bodyLight};
     border: none;
-    color: ${({ theme }) => theme.bodyLight};
+    color: ${({ theme }) => theme.textAccent};
     text-decoration: none;
     font-weight: 700;
     font-size: 1.2rem;
     padding: 0.8rem 1.2rem;
+    cursor: pointer;
   }
 
   @media ${({ theme }) => theme.screenWidth.medium} {
@@ -37,6 +39,10 @@ export const StyledHeader = styled.header`
 
   @media ${({ theme }) => theme.screenWidth.large} {
     width: 60vw;
+
+    h1 {
+      font-size: 3.8rem;
+    }
 
     p {
       width: 70%;
