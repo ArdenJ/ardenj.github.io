@@ -35,6 +35,7 @@ const App: React.FC = () => {
           padding: 0,
           margin: 0,
         }}
+        data-testid="app"
       >
         <FocusLock disabled={!open}>
           <Drawer open={open} setOpen={setOpen} id={menuId} />
@@ -57,14 +58,20 @@ const App: React.FC = () => {
           <div className="footer" style={{ minHeight: '26vh' }}>
             <Footer>
               <>
-                * I originally trained as a classical composer (think Beethoven,
-                only with better hearing and fewer good ideas) but fell in love
-                with writing code during the second year of my master’s degree.
-                Since then I have spent some time learning different
-                technologies and feel confident to begin a new career as a
-                software developer. I am aware of my relative inexperience, but
-                consider my agnosticism a strong foundation on which to build
-                good development practices.
+                <p>
+                  * (she/her) I have been working with JavaScript for a little
+                  over a year. I am highly motivated (my learning has been
+                  almost entirely self-directed) and at this point, I feel
+                  confident in my ability to write clean and maintainable code.
+                  Nevertheless, I am aware that I still have a lot to learn and
+                  hope to be able to do that within a supportive professional
+                  environment.
+                </p>
+                <p>
+                  Aside from Js, I have experience using TypeScript, HTML5,
+                  CSS3, CSS in Js, GraphQL and Apollo, Node, Express, Git, Jest,
+                  and Testing-Library.
+                </p>
               </>
             </Footer>
           </div>

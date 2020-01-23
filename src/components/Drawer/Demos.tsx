@@ -16,14 +16,14 @@ const Demos: React.FC = () => {
     const DemoItem = () => {
       if (demoLink !== undefined || demoLink !== '') {
         return (
-          <StyledDemo>
+          <StyledDemo data-testid="demo">
             <h1 className="demoTitle">{title}</h1>
-            <li key={`${title}_1`}>
+            <li key={`Demo${title}_${index}`}>
               <a href={`${demoLink}`} rel="noopener noreferrer" target="_blank">
                 demo
               </a>
             </li>
-            <li key={`${title}_1`}>
+            <li key={`Repo${title}_${index}`}>
               <a href={`${repoLink}`} rel="noopener noreferrer" target="_blank">
                 repo
               </a>
@@ -35,8 +35,8 @@ const Demos: React.FC = () => {
         return (
           <StyledDemo>
             <h1 className="demoTitle">{title}</h1>
-            <li key={`${title}_1`}>
-              <a href={`${demoLink}`} rel="noopener noreferrer" target="_blank">
+            <li key={`Repo${title}_${index}`}>
+              <a href={`${repoLink}`} rel="noopener noreferrer" target="_blank">
                 demo
               </a>
             </li>

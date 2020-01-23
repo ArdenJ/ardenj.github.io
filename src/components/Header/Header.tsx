@@ -5,7 +5,7 @@ export default function Header(
   props: JSX.ElementChildrenAttribute,
 ): JSX.Element {
   return (
-    <StyledHeader>
+    <StyledHeader data-testid="title">
       <>{props.children}</>
     </StyledHeader>
   )

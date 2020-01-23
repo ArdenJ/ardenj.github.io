@@ -11,7 +11,7 @@ interface ILink {
 export default function Links({ links }: any): JSX.Element {
   const arr = links.map((item: ILink, index: number) => {
     return (
-      <StyledLink key={`link_${index}`}>
+      <StyledLink key={`link_${index}`} data-testid="button">
         <a href={item.url} target="_blank" rel="noopener noreferrer">
           {item.label}
         </a>
