@@ -43,9 +43,7 @@ const App: React.FC = () => {
         <Container>
           <Main>
             <Header>
-              <h1>
-                I&apos;m Arden<span style={{ color: '#101010' }}>*</span>
-              </h1>
+              <h1>I&apos;m Arden*</h1>
               <p>I like using javascript and graphql to make things</p>
               <Links links={userLinks} />
               <div style={{ width: '100%' }}>
@@ -59,13 +57,19 @@ const App: React.FC = () => {
             <Footer>
               <>
                 <p>
-                  * (she/her) I have been working with JavaScript for a little
-                  over a year. I am highly motivated (my learning has been
-                  almost entirely self-directed) and at this point, I feel
-                  confident in my ability to write clean and maintainable code.
-                  Nevertheless, I am aware that I still have a lot to learn and
-                  hope to be able to do that within a supportive professional
-                  environment.
+                  * (she/her) I have been learning how to use Js for a little
+                  over a year and feel confident that at my present ability I
+                  would make a strong addition to a professional team. I am,
+                  nevertheless, equally aware that I still have a lot to learn
+                  and hope to be able to continue my development within a
+                  supportive professional environment.
+                </p>
+                <p>
+                  Since making the decision to change careers in 2019, I have
+                  remained highly motivated in my own learning, using the
+                  opportunities available to me in London (e.g. meetups,
+                  short-courses, and talks) to gain an insight into the industry
+                  and explore interesting technologies.
                 </p>
                 <p>
                   Aside from Js, I have experience using TypeScript, HTML5,

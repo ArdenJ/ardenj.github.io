@@ -19,7 +19,7 @@ export const StyledHeader = styled.header`
   }
 
   .demoButton {
-    background: ${({ theme }) => theme.bodyLight};
+    background: ${({ theme }) => theme.bodyDark};
     border: none;
     color: ${({ theme }) => theme.textAccent};
     text-decoration: none;

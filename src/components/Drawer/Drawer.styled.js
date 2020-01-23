@@ -44,7 +44,7 @@ export const StyledDrawer = styled.div`
 
   .demos {
     grid-area: body;
-    padding: 2rem;
+    padding: 2rem 2.2rem;
   }
 `
 
@@ -56,8 +56,12 @@ export const StyledDemo = styled.div`
   transition-duration: 0.2s;
 
   &:hover {
-    transform: translateX(-1rem);
+    transform: translateX(-0.5rem);
     transition-duration: 0.3s;
+  }
+
+  h1 {
+    padding-bottom: 0.3rem;
   }
 
   li {
