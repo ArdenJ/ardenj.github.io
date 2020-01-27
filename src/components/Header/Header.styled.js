@@ -21,7 +21,7 @@ export const StyledHeader = styled.header`
   .demoButton {
     background: ${({ theme }) => theme.bodyDark};
     border: none;
-    color: ${({ theme }) => theme.textAccent};
+    color: #f5f7fa;
     text-decoration: none;
     font-weight: 700;
     font-size: 1.2rem;

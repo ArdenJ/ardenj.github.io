@@ -25,9 +25,9 @@ const config = {
       url: 'https://www.github.com/ArdenJ',
     },
   ],
-  copyright: '2020 Arden 🚀', // Copyright string for the footer of the website and RSS feed.
-  themeColor: '#000000', // Used for setting manifest and progress theme colors.
-  backgroundColor: '#000000', // Used for setting manifest background color.
+  copyright: 'Arden 🚀', // Copyright string for the footer of the website and RSS feed.
+  themeColor: '#191414', // Used for setting manifest and progress theme colors.
+  backgroundColor: '#191414', // Used for setting manifest background color.
 }
 
 module.exports = config

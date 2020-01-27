@@ -3,9 +3,10 @@ import styled from 'styled-components'
 export const StyledFooter = styled.section`
   height: 100%;
   width: 100%;
-  background-color: ${({ theme }) => theme.bodyMid};
+  background-color: ${({ theme }) => theme.bodyDark};
   color: ${({ theme }) => theme.textLight};
   font-size: 1.1rem;
+  font-weight: 700;
 
   .wrapper {
     display: grid;

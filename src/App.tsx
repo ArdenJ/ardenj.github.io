@@ -48,7 +48,7 @@ const App: React.FC = () => {
               <Links links={userLinks} />
               <div style={{ width: '100%' }}>
                 <button className="demoButton" onClick={() => setOpen(!open)}>
-                  demos
+                  <span>demos</span>
                 </button>
               </div>
             </Header>
@@ -57,24 +57,22 @@ const App: React.FC = () => {
             <Footer>
               <>
                 <p>
-                  * (she/her) I have been learning how to use Js for a little
-                  over a year and feel confident that at my present ability I
-                  would make a strong addition to a professional team. I am,
-                  nevertheless, equally aware that I still have a lot to learn
-                  and hope to be able to continue my development within a
-                  supportive professional environment.
+                  * At present, I have a little over a year’s experience working
+                  mainly on my own projects, a couple of which you can find
+                  links to above or via my Github (starred repos). While I am
+                  very aware of my lack of experience, I nevertheless feel
+                  confident that I can contribute meaningfully as part of a
+                  larger team and believe looking for my first role as a
+                  developer to be the next step in continuing my development.
                 </p>
                 <p>
-                  Since making the decision to change careers in 2019, I have
-                  remained highly motivated in my own learning, using the
-                  opportunities available to me in London (e.g. meetups,
-                  short-courses, and talks) to gain an insight into the industry
-                  and explore interesting technologies.
+                  I enjoy working with new technologies and have experience
+                  using: JavaScript (ES6+) and more recently TypeScript, React
+                  (16+), CSS, CSS in JS, HTML, GraphQL, and Node.
                 </p>
                 <p>
-                  Aside from Js, I have experience using TypeScript, HTML5,
-                  CSS3, CSS in Js, GraphQL and Apollo, Node, Express, Git, Jest,
-                  and Testing-Library.
+                  I am also confident using Git, linting and formatting my code,
+                  and writing tests using Jest and Testing-Library.
                 </p>
               </>
             </Footer>

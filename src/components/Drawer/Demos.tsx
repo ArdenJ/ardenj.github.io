@@ -1,11 +1,11 @@
 import React from 'react'
 
-import { devSite, audioPlayer } from './demoExamples'
+import { devSite, audioPlayer, calendar } from './demoExamples'
 
 import { StyledDemo } from './Drawer.styled'
 
-const Demos: React.FC = () => {
-  const arr = [devSite, audioPlayer]
+const Demos: React.FC = props => {
+  const arr = [devSite, audioPlayer, calendar]
 
   // eslint-disable-next-line no-undef
   const demoArr: JSX.Element[] = arr.map((i, index: number) => {
@@ -14,7 +14,7 @@ const Demos: React.FC = () => {
     } = i
 
     const DemoItem = () => {
-      if (demoLink !== undefined || demoLink !== '') {
+      if (demoLink !== undefined) {
         return (
           <StyledDemo data-testid="demo">
             <h1 className="demoTitle">{title}</h1>
@@ -37,7 +37,7 @@ const Demos: React.FC = () => {
             <h1 className="demoTitle">{title}</h1>
             <li key={`Repo${title}_${index}`}>
               <a href={`${repoLink}`} rel="noopener noreferrer" target="_blank">
-                demo
+                repo
               </a>
             </li>
           </StyledDemo>

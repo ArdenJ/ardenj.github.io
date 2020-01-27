@@ -9,5 +9,5 @@ afterEach(cleanup)
 it('returns two the examples list', () => {
   const container = document.createElement('div')
   ReactDOM.render(<Demos />, container)
-  expect(container.children.length).toBe(2)
+  expect(container.children.length).toBe(3)
 })

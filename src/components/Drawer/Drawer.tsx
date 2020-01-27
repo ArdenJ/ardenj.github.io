@@ -14,6 +14,7 @@ export default function Drawer(props: {
       <button
         className="drawerButton"
         onClick={() => props.setOpen(!props.open)}
+        tabIndex={props.open ? 0 : -1}
       >
         <span>&times;</span>
       </button>

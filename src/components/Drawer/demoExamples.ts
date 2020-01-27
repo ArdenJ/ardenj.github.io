@@ -1,13 +1,13 @@
 interface IData {
   title: string
   repoLink: string
-  demoLink?: string
+  demoLink?: string | undefined
 }
 
 class WorkExample {
   _demoInfo: IData
 
-  constructor(title: string, repoLink: string, demoLink: string) {
+  constructor(title: string, repoLink: string, demoLink?: string) {
     this._demoInfo = {
       title,
       repoLink,
@@ -30,4 +30,9 @@ export const audioPlayer = new WorkExample(
   'ID3 audio player',
   'https://github.com/ArdenJ/audioplayer',
   'https://w9c0x.csb.app/',
+)
+
+export const calendar = new WorkExample(
+  'React/Apollo calendar',
+  'https://github.com/ArdenJ/calendar',
 )

@@ -5,8 +5,8 @@ export const StyledMain = styled.main`
   grid-template-areas: 'header section';
   overflow-x: hidden;
   align-items: center;
-  background-color: ${({ theme }) => theme.bodyAccent};
-  background-image: linear-gradient(40deg, #bb96bd, #9d679f);
+  background-color: ${({ theme }) => theme.bodyLight};
+  background-image: linear-gradient(40deg, #f5f7fa, #c3cfe2);
   color: ${({ theme }) => theme.textDark};
   height: 100vh;
   width: 100vw;
