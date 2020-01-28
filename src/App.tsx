@@ -37,6 +37,7 @@ const App: React.FC = () => {
         }}
         data-testid="app"
       >
+        {/* TODO: Focus lock  */}
         <FocusLock disabled={!open}>
           <Drawer open={open} setOpen={setOpen} id={menuId} />
         </FocusLock>
