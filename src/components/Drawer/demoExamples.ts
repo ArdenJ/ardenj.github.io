@@ -22,7 +22,7 @@ class WorkExample {
 
 export const devSite = new WorkExample(
   'this site',
-  'https://github.com/ArdenJ/site',
+  'https://github.com/ArdenJ/ardenj.github.io',
   'https://ardenj.co',
 )
 
