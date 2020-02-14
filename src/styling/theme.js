@@ -1,13 +1,11 @@
 export const theme = {
-  textLight: '#f5f7fa',
-  textDark: '#191414',
-  textDarkLink: '#101010',
-  textAccent: '#6991c7',
+  bodyPrimary: '#fff',
+  bodySecondary: '#fff',
+  textPrimary: '#191414',
+  textSecondary: '#101010',
 
-  bodyDark: '#101010',
-  bodyMid: '#191414',
-  bodyLight: '#f5f7fa',
-  bodyAccent: '#6991c7',
+  accent1: '#ff6666',
+  accent2: '#66b3ff',
 
   screenWidth: {
     medium: '(min-width: 424px)',

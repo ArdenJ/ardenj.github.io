@@ -18,7 +18,7 @@ export const StyledLinkContainer = styled.div`
 
   a {
     text-decoration: none;
-    color: ${({ theme }) => theme.textDark};
+    color: ${({ theme }) => theme.textPrimary};
     cursor: pointer;
   }
 `
@@ -30,6 +30,6 @@ export const StyledLink = styled.button`
   font-size: 1.2rem;
   padding: 0.8rem 1.2rem;
   margin: 0 0.6rem 0.4rem 0;
-  border: 4px solid ${({ theme }) => theme.textDark};
+  border: 4px solid ${({ theme }) => theme.textPrimary};
   color: ${({ theme }) => theme.textDark};
 `

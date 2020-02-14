@@ -2,13 +2,14 @@ import styled from 'styled-components'
 
 export const StyledHeader = styled.header`
   grid-area: header;
-  max-width: 80vw;
   font-weight: 900;
   margin: auto;
   line-height: 1;
+  width: 100%;
 
   h1 {
     font-size: 2.6rem;
+    color: ${({ theme }) => theme.primary};
   }
 
   p {
@@ -16,30 +17,20 @@ export const StyledHeader = styled.header`
     font-size: 1.8rem;
     width: 80%;
     margin: 0.4rem 0 0.8rem 0;
+    color: ${({ theme }) => theme.textPrimary};
   }
 
-  .demoButton {
-    background: ${({ theme }) => theme.bodyDark};
-    border: none;
-    color: #f5f7fa;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.2rem;
-    padding: 0.8rem 1.2rem;
-    cursor: pointer;
+  a {
+    color: ${({ theme }) => theme.textSecondary};
   }
 
   @media ${({ theme }) => theme.screenWidth.medium} {
-    width: 60vw;
-
     p {
       width: 80%;
     }
   }
 
   @media ${({ theme }) => theme.screenWidth.large} {
-    width: 60vw;
-
     h1 {
       font-size: 3.8rem;
     }

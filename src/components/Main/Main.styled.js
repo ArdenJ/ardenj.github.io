@@ -1,15 +1,20 @@
 import styled from 'styled-components'
 
 export const StyledMain = styled.main`
-  display: grid;
-  grid-template-areas: 'header section';
   overflow-x: hidden;
   align-items: center;
-  background-color: ${({ theme }) => theme.bodyLight};
-  background-image: linear-gradient(40deg, #f5f7fa, #c3cfe2);
-  color: ${({ theme }) => theme.textDark};
-  height: 100vh;
+  background-color: ${({ theme }) => theme.bodyPrimary};
+  color: ${({ theme }) => theme.textPrimary};
+  min-height: 50vh;
   width: 100vw;
   justify-content: center;
   text-rendering: optimizeLegibility;
+  padding: 2rem;
+
+  @media ${({ theme }) => theme.screenWidth.medium} {
+    margin: 0 auto;
+  }
+  @media ${({ theme }) => theme.screenWidth.large} {
+    max-width: 100vw;
+  }
 `
