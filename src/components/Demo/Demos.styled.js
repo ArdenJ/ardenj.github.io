@@ -62,6 +62,14 @@ export const StyledDemoContainer = styled.section`
   }
 
   @media ${({ theme }) => theme.screenWidth.large} {
-    width: 100vw;
+    width: 80vw;
+
+    .demos {
+      width: 100%;
+      flex-wrap: wrap;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 `

@@ -5,7 +5,7 @@ export const StyledMain = styled.main`
   align-items: center;
   background-color: ${({ theme }) => theme.bodyPrimary};
   color: ${({ theme }) => theme.textPrimary};
-  min-height: 50vh;
+  min-height: 60vh;
   width: 100vw;
   justify-content: center;
   text-rendering: optimizeLegibility;
@@ -13,8 +13,10 @@ export const StyledMain = styled.main`
 
   @media ${({ theme }) => theme.screenWidth.medium} {
     margin: 0 auto;
+    min-height: 50vh;
   }
   @media ${({ theme }) => theme.screenWidth.large} {
     max-width: 100vw;
+    min-height: 48vh;
   }
 `

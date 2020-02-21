@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components'
 import { theme } from './styling/theme'
 import { GlobalStyles } from './styling/global'
 
-import { Container, Main, Header, Links, Demos } from './components/index'
+import { Container, Main, Header, Demos } from './components/index'
 
 const App: React.FC = () => {
   return (
@@ -36,7 +36,7 @@ const App: React.FC = () => {
                 </a>
                 &nbsp;
                 <a
-                  href="https://www.twitter.com/_ardenj"
+                  href="https://www.github.com/ArdenJ"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
