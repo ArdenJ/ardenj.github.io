@@ -6,6 +6,8 @@ export const StyledHeader = styled.header`
   margin: auto;
   line-height: 1;
   width: 100%;
+  height: 100%;
+  overflo: hidden;
 
   h1 {
     font-size: 2.6rem;

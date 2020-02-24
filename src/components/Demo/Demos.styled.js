@@ -17,7 +17,7 @@ export const StyledDemo = styled.div`
   .animatedDiv {
     background-color: ${({ theme }) => theme.bodyPrimary};
     padding: 1.6rem;
-    margin: 0 2rem 1.6rem 0;
+    margin: 0 2.4rem 1.6rem 0;
     border: 5px solid ${({ theme }) => theme.textPrimary};
     box-shadow: 12px 12px 0 4px ${({ theme }) => theme.textPrimary};
     z-index: 10;
@@ -27,11 +27,12 @@ export const StyledDemo = styled.div`
   }
 
   @media ${({ theme }) => theme.screenWidth.medium} {
-    width: 70%;
+    max-width: 70%;
   }
 
   @media ${({ theme }) => theme.screenWidth.large} {
-    max-width: 30vw;
+    min-width: 360px;
+    max-width: 32%;
   }
 `
 
@@ -43,8 +44,6 @@ export const StyledDemoContainer = styled.section`
   margin: auto 0;
   display: grid;
   align-content: left;
-  grid-template-rows: auto auto;
-  grid-template-columns: 100%;
 
   h2 {
     color: ${({ theme }) => theme.textPrimary};
@@ -65,7 +64,7 @@ export const StyledDemoContainer = styled.section`
     width: 80vw;
 
     .demos {
-      width: 100%;
+      width: auto;
       flex-wrap: wrap;
       display: flex;
       flex-direction: row;
