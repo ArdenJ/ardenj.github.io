@@ -16,8 +16,8 @@ You will also see any lint errors in the console.
 
 ## To Dos
 
-- Make it a little more visually interesting (I'd like to do something with React Spring...)
-- Create some simple tests
+- Make interaction a little more interesting
+- move to SSR just for kicks.
 
 ## Built With
 
