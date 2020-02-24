@@ -7,7 +7,11 @@ export const StyledHeader = styled.header`
   line-height: 1;
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
   overflow: hidden;
+=======
+  overflo: hidden;
+>>>>>>> b3ca6bc6cd5b1410927844e4b0e22ea11237cc30
 
   h1 {
     font-size: 2.6rem;
