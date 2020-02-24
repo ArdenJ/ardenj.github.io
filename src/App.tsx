@@ -20,12 +20,11 @@ const App: React.FC = () => {
         }}
         data-testid="app"
       >
-        {/* TODO: Focus lock  */}
         <Container>
           <Main>
             <Header>
               <h1>I&apos;m Arden</h1>
-              <p>I like using javascript and graphql to break things</p>
+              <p>I like using javascript and graphql to make things</p>
               <p>
                 <a
                   href="https://www.twitter.com/_ardenj"
