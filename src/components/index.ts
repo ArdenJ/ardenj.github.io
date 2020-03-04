@@ -1,5 +1,3 @@
 export { default as Container } from './Container'
-export { default as Header } from './Header'
-export { default as Links } from './Links'
-export { default as Main } from './Main'
-export { default as Demos } from './Demo'
+export { default as Title } from './Title'
+export { default as Body } from './Body'
