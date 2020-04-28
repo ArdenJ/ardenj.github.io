@@ -1,4 +1,4 @@
-# Personal Page
+# 'DEV SITE'
 
 The intention of this simple landing page is to direct people who may be interested in what I can do to projects that demonstrate my skills. The page itself is written mainly using TypeScript and styled components using [Create React App](https://github.com/facebook/create-react-app)'s TypeScript starter.
 
@@ -8,10 +8,10 @@ In the project directory, you can run:
 
 ### `yarn start`
 
-Runs the app in the development mode.<br />
+Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
+The page will reload if you make edits.
 You will also see any lint errors in the console.
 
 ## To Dos
