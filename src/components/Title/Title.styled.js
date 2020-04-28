@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const StyledTitle = styled.main`
+margin-top: 4.4rem;
   padding: 2rem;
   width: 100vw;
 

@@ -18,9 +18,10 @@ export const GlobalStyles = createGlobalStyle`
     body {
         overflow-x: hidden;
         align-items: center;
-        color: ${({ theme }) => theme.textDark};
+        color: ${({ theme }) => theme.textPrimary};
         display: flex;
         height: 100vh;
+        width: 100vw;
         justify-content: center;
         text-rendering: optimizeLegibility;
         line-height: 1.5;
@@ -30,5 +31,12 @@ export const GlobalStyles = createGlobalStyle`
         font-family: 'Montserrat', sans-serif;
         font-weight: 700;
         line-height: 1;
+    }
+
+    .hidden {
+        display: none !important;
+        transform: translateY(-100%);
+        opacity: 0;
+        transition-duration: 1s;
     }
 `
