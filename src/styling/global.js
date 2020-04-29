@@ -19,10 +19,8 @@ export const GlobalStyles = createGlobalStyle`
         overflow-x: hidden;
         align-items: center;
         color: ${({ theme }) => theme.textPrimary};
-        display: flex;
         height: 100vh;
         width: 100vw;
-        justify-content: center;
         text-rendering: optimizeLegibility;
         line-height: 1.5;
     }

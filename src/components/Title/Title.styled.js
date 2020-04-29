@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const StyledTitle = styled.main`
-margin-top: 4.4rem;
   padding: 2rem;
   width: 100vw;
 
@@ -16,6 +15,8 @@ margin-top: 4.4rem;
     #fff 3px,
     #fff 10px
   );
+
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
