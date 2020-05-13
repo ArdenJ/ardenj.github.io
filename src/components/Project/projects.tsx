@@ -6,9 +6,9 @@ const projects = [
     title: 'Auth API',
     summary: 'A CRUD-functional authentication/authorization API using JSON Web Tokens and an opinionated GraphQL endpoint. Users can create unique accounts, log in and out, and delete their accounts.',
     tech: [
-      'TypeScript', 'React', 'Apollo Client', 'XState', 'Emotion CSS', 'Apollo Server', 'Node', 'Prisma2 (Migrate)', 'Postgres', 'Docker', 'BCryptjs', 'JWT',
+      'TypeScript', 'Apollo Server', 'Node', 'Prisma2 (Migrate)', 'Postgres', 'Docker', 'BCryptjs', 'JWT',
     ],
-    demo: 'link1',
+    demo: 'https://drive.google.com/file/d/1zOqEtA6WHoQzJJETmJy3nmZ7ob0oqy9u/preview',
     repo: 'https://github.com/ArdenJ/gql-auth-api',
   },
   {
