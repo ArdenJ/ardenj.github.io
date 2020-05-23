@@ -1,8 +1,8 @@
 export const theme = {
   textPrimary: '#191414',
-  textSecondary: '#101010',
+  textSecondary: '#000104',
 
-  accent1: '#ff6666',
+  accent1: '#fb7e91',
 
   screenWidth: {
     medium: '(min-width: 424px)',

@@ -12,20 +12,10 @@ const StyledTitle = styled.main`
 
   h1 {
     width: 100%;
-    font-size: 6rem;
-    font-weight: 900;
-    background-image: repeating-linear-gradient(
-    -45deg,
-    #191414,
-    #191414 6px,
-    #fff 3px,
-    #fff 10px
-  );
-
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+    font-size: 3.6rem;
+    font-weight: 700;
+    line-height: 0.8;
+    text-transform: lowercase;
 
   @media screen and ${({ theme }) => theme.screenWidth.medium} {
     display: flex;

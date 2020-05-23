@@ -4,7 +4,7 @@ import Project from './Project'
 const projects = [
   {
     title: 'Auth API',
-    summary: 'A CRUD-functional authentication/authorization API using JSON Web Tokens and an opinionated GraphQL endpoint. Users can create unique accounts, log in and out, and delete their accounts.',
+    summary: 'A CRUD-functioning authentication/authorization API using JSON Web Tokens and an opinionated GraphQL endpoint. Users can create unique accounts, log in and out, and delete their accounts.',
     tech: [
       'TypeScript', 'Apollo Server', 'Node', 'Prisma2 (Migrate)', 'Postgres', 'Docker', 'BCryptjs', 'JWT',
     ],
@@ -41,5 +41,7 @@ const projects = [
 ]
 
 export const projArr = projects.map((i, index) => {
-  return <Project key={index} title={i.title} summary={i.summary} demo={i.demo} repo={i.repo}/>
+  return (
+    <Project key={`project_${index}`} title={i.title} summary={i.summary} demo={i.demo} repo={i.repo} />
+  )
 })

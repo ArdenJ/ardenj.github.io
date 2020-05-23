@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled, { ThemeProvider } from 'styled-components'
+import { motion } from 'framer-motion'
 
 import { theme } from './styling/theme'
 import { GlobalStyles } from './styling/global'
@@ -11,6 +12,7 @@ import { projArr } from './components/Project/projects'
 const App: React.FC = () => {
   const [isHidden, setIsHidden] = useState(false)
 
+  // TODO: This component should not be responsible for the alert!
   function copy() {
     const el = document.createElement('textarea')
     el.value = 'j.gaddas@outlook.com'
@@ -50,6 +52,67 @@ const App: React.FC = () => {
     )
   }
 
+  const parent = {
+    hidden: {
+      opacity: 0,
+      transition: {
+        when: 'afterChildren',
+      },
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        when: 'beforeChildren',
+        staggerChildren: 1,
+      },
+    },
+  }
+
+  const childParagraph = {
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 1 },
+    },
+    hidden: {
+      opacity: 0,
+      x: -20,
+    },
+  }
+
+  const childList = {
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 0.4,
+        when: 'beforeChildren',
+        staggerChildren: 0.3,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      transition: {
+        when: 'afterChildren',
+      },
+    },
+  }
+
+  const childListItem = {
+    visible: {
+      opacity: 1,
+      transition: {
+        when: 'beforeChildren',
+        staggerChildren: 0.3,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      transition: {
+        when: 'afterChildren',
+      },
+    },
+  }
+
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
@@ -61,15 +124,17 @@ const App: React.FC = () => {
           </Title>
           {/* Content */}
           <Body>
-            <div>
-              and I&apos;m a software developer based in London. I&apos;ve been coding for over a year and mainly work with <strong>JavaScript/TypeScript</strong>, <strong>Node</strong>, and <strong>GraphQL</strong>. Perhaps more importantly, I&apos;m an enthusiastic team member, who is highly-motivated by technical and creative challenges. <span role="img" aria-label="nerd-face">🤓</span><br/>
-              <strong>I am also actively looking for my first role - so, if you think I might be a good fit for your team, please do get in touch!</strong><br/>
-              <ul>
-                <li><a href='https://www.github.com/ArdenJ' target='blank' rel='noopener noreferrer'>github</a></li>
-                <li><a href='https://www.linkedin.com/in/arden-james/' target='blank' rel='noopener noreferrer'>linkedin</a></li>
-                <li><button onClick={() => handleAlert()}>email</button></li>
-              </ul>
-            </div>
+            <motion.div initial="hidden" animate="visible" variants={parent}>
+              <motion.p variants={childParagraph}>
+                and I&apos;m a software developer based in London mainly working with <strong>JavaScript/TypeScript</strong>, <strong>Node</strong>, and <strong>GraphQL</strong> (and maybe a little <strong>Go</strong>). I make terrible puns, derive an almost-weird amount of pleasure from good docs with meaningful examples, and I am probably guilty of getting too enthusiastic about the new framework evry1 is talking about this week.<br/>
+                <strong>I am also actively looking for a new role - so, if you think I might be a good fit for your team, please do get in touch!</strong><br/>
+              </motion.p>
+              <motion.ul initial="hidden" animate="visible" variants={childList}>
+                <motion.li variants={childListItem}><a href='https://www.github.com/ArdenJ' target='blank' rel='noopener noreferrer'>github</a></motion.li>
+                <motion.li variants={childListItem}><a href='https://www.linkedin.com/in/arden-james/' target='blank' rel='noopener noreferrer'>linkedin</a></motion.li>
+                <motion.li variants={childListItem}><button onClick={() => handleAlert()}>email</button></motion.li>
+              </motion.ul>
+            </motion.div>
           </Body>
         </div>
         <Projects>
