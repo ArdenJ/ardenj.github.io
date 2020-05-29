@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled, { ThemeProvider } from 'styled-components'
-import { motion } from 'framer-motion'
+import { color } from './components/Project/randomColors'
 
 import { theme } from './styling/theme'
 import { GlobalStyles } from './styling/global'
@@ -52,67 +52,6 @@ const App: React.FC = () => {
     )
   }
 
-  const parent = {
-    hidden: {
-      opacity: 0,
-      transition: {
-        when: 'afterChildren',
-      },
-    },
-    visible: {
-      opacity: 1,
-      transition: {
-        when: 'beforeChildren',
-        staggerChildren: 1,
-      },
-    },
-  }
-
-  const childParagraph = {
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 1 },
-    },
-    hidden: {
-      opacity: 0,
-      x: -20,
-    },
-  }
-
-  const childList = {
-    visible: {
-      opacity: 1,
-      transition: {
-        delay: 0.4,
-        when: 'beforeChildren',
-        staggerChildren: 0.3,
-      },
-    },
-    hidden: {
-      opacity: 0,
-      transition: {
-        when: 'afterChildren',
-      },
-    },
-  }
-
-  const childListItem = {
-    visible: {
-      opacity: 1,
-      transition: {
-        when: 'beforeChildren',
-        staggerChildren: 0.3,
-      },
-    },
-    hidden: {
-      opacity: 0,
-      transition: {
-        when: 'afterChildren',
-      },
-    },
-  }
-
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
@@ -124,17 +63,18 @@ const App: React.FC = () => {
           </Title>
           {/* Content */}
           <Body>
-            <motion.div initial="hidden" animate="visible" variants={parent}>
-              <motion.p variants={childParagraph}>
-                and I&apos;m a software developer based in London mainly working with <strong>JavaScript/TypeScript</strong>, <strong>Node</strong>, and <strong>GraphQL</strong> (and maybe a little <strong>Go</strong>). I make terrible puns, derive an almost-weird amount of pleasure from good docs with meaningful examples, and I am probably guilty of getting too enthusiastic about the new framework evry1 is talking about this week.<br/>
+            <div>
+              <p>
+                and I&apos;m a software developer based in London mainly working with <Strong color={theme.accents.red}>JavaScript/TypeScript</Strong>, <Strong color={theme.accents.green}>Node</Strong>, and <Strong color={theme.accents.yellow}>GraphQL</Strong> (and maybe a little <Strong color={theme.accents.blue}>Go</Strong>). I make terrible puns, derive an almost-weird amount of pleasure from seeing good docs with meaningful examples, and I am probably guilty of getting a little too excited the new framework everyone is talking about on twitter this week.<br/>
                 <strong>I am also actively looking for a new role - so, if you think I might be a good fit for your team, please do get in touch!</strong><br/>
-              </motion.p>
-              <motion.ul initial="hidden" animate="visible" variants={childList}>
-                <motion.li variants={childListItem}><a href='https://www.github.com/ArdenJ' target='blank' rel='noopener noreferrer'>github</a></motion.li>
-                <motion.li variants={childListItem}><a href='https://www.linkedin.com/in/arden-james/' target='blank' rel='noopener noreferrer'>linkedin</a></motion.li>
-                <motion.li variants={childListItem}><button onClick={() => handleAlert()}>email</button></motion.li>
-              </motion.ul>
-            </motion.div>
+              </p>
+              <ul>
+                <li><a href='https://www.github.com/ArdenJ' target='blank' rel='noopener noreferrer'>github</a></li>
+                <li><a href='https://www.linkedin.com/in/arden-james/' target='blank' rel='noopener noreferrer'>linkedin</a></li>
+                <li><a href='https://www.medium.com/@arrrden/' target='blank' rel='noopener noreferrer'>medium</a></li>
+                <li><button onClick={() => handleAlert()}>email</button></li>
+              </ul>
+            </div>
           </Body>
         </div>
         <Projects>
@@ -146,15 +86,22 @@ const App: React.FC = () => {
   )
 }
 
+const Strong = ({ color, children }:{color: string, children: string}) => {
+  return (
+    <strong style={{ color: color }}>{children}</strong>
+  )
+}
+
 const StyledAlert = styled.div`
   min-width: 300px;
   margin: 0 auto;
-  color: #000;
+  color: white;
   display: flex;
   justify-content: space-between;
-  background-color: ${({ theme }) => theme.accent1};
+  background-color: ${() => color()};
 
   span {
+    color: white;
     padding: 1rem;
   }
 

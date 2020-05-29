@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import styled from 'styled-components'
-import { motion } from 'framer-motion'
+
+import { color } from './randomColors'
 
 interface IProjectProps {
   title: string
@@ -10,23 +11,9 @@ interface IProjectProps {
 }
 
 const Project = ({ title, summary, demo, repo }: IProjectProps):JSX.Element => {
-  const item = {
-    hidden: {
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-      transition: { when: 'afterChildren', delay: 2, duration: 3 },
-    },
-  }
-
   return (
     <StyledProject>
-      <motion.div
-        className='PROJECT'
-        initial="hidden"
-        animate="visible"
-        variants={item}>
+      <div className='PROJECT'>
         <div className='content'>
           <div className='titleContainer'>
             <h2>{title}</h2>
@@ -39,7 +26,7 @@ const Project = ({ title, summary, demo, repo }: IProjectProps):JSX.Element => {
             <Button title='repo' link={repo} />
           </div>
         </div>
-      </motion.div>
+      </div>
     </StyledProject>
   )
 }
@@ -52,15 +39,6 @@ const StyledProject = styled.article`
   .PROJECT {
     height: 100%;
     width: 100%;
-
-
-    background-image: repeating-linear-gradient(
-      -45deg,
-      #fbe87e,
-      #fbe87e 2px,
-      #fff 2px,
-      #fff 10px
-    );
   }
 
   .content {
@@ -80,8 +58,6 @@ const StyledProject = styled.article`
   .links {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-
     width: 100%;
     min-height: 5.4rem;
   }
@@ -105,12 +81,10 @@ const StyledProject = styled.article`
     }
 
     .links {
-      height: 40%;
+      max-height: 40%;
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
       align-items: center;
-      max-width: 40%;
+      width: 40%;
       padding-left: 1rem;
     }
 
@@ -122,12 +96,24 @@ const StyledProject = styled.article`
 `
 
 const Button = (props: any): JSX.Element => {
+  const ref = useRef(null)
+
+  useEffect(() => {
+    // @ts-ignore
+    // eslint-disable-next-line no-return-assign
+    ref.current.addEventListener('mouseenter', (e) => e.target.style.background = color())
+    return () => {
+      // @ts-ignore
+      ref.current.addEventListener('mouseenter')
+    }
+  }, [ref])
+
   return (
     <StyledButton>
       <a href={props.link} rel='noopener noreferrer' target='_blank'>
-        <button>
+        <div ref={ref} className='ref-div'>
           {props.title}
-        </button>
+        </div>
       </a>
     </StyledButton>
   )
@@ -135,31 +121,31 @@ const Button = (props: any): JSX.Element => {
 
 const StyledButton = styled.div`
   width: 100%;
+  height: 100%;
+  margin-bottom: 0.4rem;
 
-  button {
-    background: black;
+  a {text-decoration: none}
+
+  .ref-div {
+    background: ${() => color()};
     border: none;
     padding: 0.8rem;
-    min-width: 50%;
-
+    width: 100%;
     font-size: 0.8rem;
     font-weight: 700;
     text-transform: capitalize;
     color: white;
-
     transition-delay: 0.2s;
     transition-duration: 0.5s;
-
     cursor: pointer;
   }
 
-  button:hover {
+  .ref-div:hover {
     transition-duration: 0.3s;
-    background: ${({ theme }) => theme.accent1};
   }
 
   @media screen and ${({ theme }) => theme.screenWidth.large} {
-    button: {
+    .ref-div {
       width: 100%;
     }
   }

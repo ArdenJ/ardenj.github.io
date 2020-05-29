@@ -1,8 +1,12 @@
 export const theme = {
-  textPrimary: '#191414',
-  textSecondary: '#000104',
+  dark: '#191414',
 
-  accent1: '#fb7e91',
+  accents: {
+    red: '#fb0443',
+    yellow: '#fbbc04',
+    blue: '#0443fb',
+    green: '#34a853',
+  },
 
   screenWidth: {
     medium: '(min-width: 424px)',

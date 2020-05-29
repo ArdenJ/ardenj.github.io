@@ -12,9 +12,9 @@ const StyledTitle = styled.main`
 
   h1 {
     width: 100%;
-    font-size: 3.6rem;
+    font-size: 3rem;
     font-weight: 700;
-    line-height: 0.8;
+    line-height: 1;
     text-transform: lowercase;
 
   @media screen and ${({ theme }) => theme.screenWidth.medium} {

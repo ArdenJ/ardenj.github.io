@@ -28,8 +28,9 @@ const StyledBody = styled.main`
     }
 
     button, a {
-      color: ${({ theme }) => theme.textSecondary};
+      color: ${({ theme }) => theme.dark};
       font-size: 1rem;
+      font-family: 'Muli', sans-serif !important;
       transition-duration: 0.5s;
     }
 
@@ -47,10 +48,6 @@ const StyledBody = styled.main`
     align-self: right;
     display: flex;
     justify-content: space-between;
-  }
-
-  @media screen and (min-width: 1000px){
-    /* padding-top: 15vh; */
   }
 
 `

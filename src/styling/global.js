@@ -16,7 +16,7 @@ export const GlobalStyles = createGlobalStyle`
     body {
         overflow-x: hidden;
         align-items: center;
-        color: ${({ theme }) => theme.textPrimary};
+        color: ${({ theme }) => theme.dark};
         height: 100vh;
         width: 100vw;
         text-rendering: optimizeLegibility;
@@ -24,6 +24,7 @@ export const GlobalStyles = createGlobalStyle`
     }
     
     h1, h2, h3, h4, h5, h6 {
+        font-family: "Montserrat", sans-serif;
         font-weight: 700;
         line-height: 1;
     }
