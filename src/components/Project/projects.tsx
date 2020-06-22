@@ -9,7 +9,7 @@ const projects = [
       'TypeScript', 'Apollo Server', 'Node', 'Prisma2 (Migrate)', 'Postgres', 'Docker', 'BCryptjs', 'JWT',
     ],
     demo: 'https://drive.google.com/file/d/1zOqEtA6WHoQzJJETmJy3nmZ7ob0oqy9u/preview',
-    repo: 'https://github.com/ArdenJ/gql-auth-api',
+    repo: 'https://github.com/arrrden/gql-auth-api',
   },
   {
     title: 'XState Video Player',
@@ -18,7 +18,7 @@ const projects = [
       'React', 'XState', 'Styled-Components / inline CSS', 'Webpack',
     ],
     demo: 'https://s9php.sse.codesandbox.io/',
-    repo: 'https://github.com/ArdenJ/videoplayer',
+    repo: 'https://github.com/arrrden/videoplayer',
   },
   {
     title: 'Apollo/React Calendar',
@@ -27,7 +27,7 @@ const projects = [
       'TypeScript', 'React', 'Apollo', 'Node', 'Styled-Components', 'Webpack',
     ],
     demo: 'https://drive.google.com/file/d/1eiy_-kSahI7kw28D-icBHoDfMv2voY3T/preview',
-    repo: 'https://github.com/ArdenJ/calendar',
+    repo: 'https://github.com/arrrden/calendar',
   },
   {
     title: 'React Audio Player',
@@ -36,7 +36,7 @@ const projects = [
       'React', 'Styled-Components',
     ],
     demo: 'https://w9c0x.csb.app/',
-    repo: 'https://github.com/ArdenJ/audioplayer',
+    repo: 'https://github.com/arrrden/audioplayer',
   },
 ]
 

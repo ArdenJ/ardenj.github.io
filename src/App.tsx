@@ -69,7 +69,7 @@ const App: React.FC = () => {
                 <strong>I am also actively looking for a new role - so, if you think I might be a good fit for your team, please do get in touch!</strong><br/>
               </p>
               <ul>
-                <li><a href='https://www.github.com/ArdenJ' target='blank' rel='noopener noreferrer'>github</a></li>
+                <li><a href='https://www.github.com/arrrden' target='blank' rel='noopener noreferrer'>github</a></li>
                 <li><a href='https://www.linkedin.com/in/arden-james/' target='blank' rel='noopener noreferrer'>linkedin</a></li>
                 <li><a href='https://www.medium.com/@arrrden/' target='blank' rel='noopener noreferrer'>medium</a></li>
                 <li><button onClick={() => handleAlert()}>email</button></li>
